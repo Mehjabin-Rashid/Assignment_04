@@ -1,4 +1,4 @@
-export const MONGODB_CONNECTION= "mongodb+srv://Mehjabin:241103@cluster0.mwz5d.mongodb.net/Ostad-Test";
+export const MONGODB_CONNECTION= "mongodb+srv://Mehjabin:241103@cluster0.mwz5d.mongodb.net/Back_End";
 
 export const JWT_SECRET = "5EC7CEFA1BE7C9354A639369A2AA8";
 export const JWT_EXPIRATION_TIME = 60*60*24*30;

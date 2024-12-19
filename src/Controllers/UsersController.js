@@ -22,6 +22,17 @@ export const Login = async (req, res) =>{
             // Login Success Token Encode
             let token = TokenEncode(data['phoneNumber'], data['_id']);
             return res.json({status:"Success", message: "User Login successFully",token:token});
+            if(data['status']==="Success"){
+
+                // Cookies Option
+                let cookieOption = {expires:new Date(Date.now()+24*6060*1000), httpOnly:false};
+        
+                // Set Cookies With Response
+                res.cookie('token',data['token'],cookieOption);
+                return res.status(200).json(data);
+            }else{
+                return res.status(200).json(data);
+            };
         };
     }catch(e){
         return res.json({status:"fail", message: e.toString()});
