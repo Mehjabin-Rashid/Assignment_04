@@ -8,7 +8,7 @@ router.post("/Registration",UsersController.Registration);
 router.post("/Login",UsersController.Login);
 router.get("/ProfileRead",AuthVerification,UsersController.ProfileRead);
 router.get("/AllProfileRead",AuthVerification,UsersController.AllProfileRead);
-router.post("/ProfileUpdate",UsersController.ProfileUpdate);
+router.post("/ProfileUpdate",AuthVerification,UsersController.ProfileUpdate);
 router.get("/Delete",UsersController.Delete);
 
 export default router;

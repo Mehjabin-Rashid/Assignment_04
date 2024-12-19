@@ -17,7 +17,7 @@ export default (req, res, next) => {
     }else{
         // phoneNumber, user_id pick from decoded token
         let phoneNumber = decoded.phoneNumber;
-        let user_id = decoded.User_id;
+        let user_id = decoded.User_id
 
         // phoneNumber, user_id add with request header 
         req.headers.phoneNumber = phoneNumber;
